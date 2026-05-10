@@ -36,7 +36,8 @@ SIGN_LIST: List[Tuple[str, str]] = [
     ("@XFchart1", "签到"),
     ("@xamowbot", "签到"),
     ("@yuntuvpnbot", "/checkin"),
-    ("@lightningxvpngroup", "抽奖")  # 新增：lightningxvpngroup 抽奖
+    ("@lightningxvpngroup", "抽奖"),  # 新增：lightningxvpngroup 抽奖
+    ("@aisgk1", "/sign"),  # 新增：aisgk1 签到
 ]
 
 # 重试与超时配置
