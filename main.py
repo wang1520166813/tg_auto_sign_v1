@@ -38,6 +38,7 @@ SIGN_LIST: List[Tuple[str, str]] = [
     ("@yuntuvpnbot", "/checkin"),
     ("@lightningxvpngroup", "抽奖"),  # 新增：lightningxvpngroup 抽奖
     ("@aisgk1", "/sign"),  # 新增：aisgk1 签到
+    ("@XJSGK_bot", "/sign"),  # 新增：XJSGK_bot 签到
 ]
 
 # 重试与超时配置
@@ -151,7 +152,7 @@ async def connect_with_timeout(client, timeout):
 
 async def main():
     print("=" * 60, flush=True)
-    print(f"🚀 Telegram 自动签到 (完美版 v5 - 新增 lightningxvpngroup)", flush=True)
+    print(f"🚀 Telegram 自动签到 (完美版 v5 - 新增 XJSGK_bot)", flush=True)
     start_time = get_beijing_time()
     print(f"📅 启动时间：{start_time}", flush=True)
     print("=" * 60, flush=True)
