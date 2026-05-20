@@ -6,6 +6,11 @@ on:
     - cron: '30 16 * * *'
   workflow_dispatch:
 
+# 确保同一时间只有一个实例运行，防止重复签到
+concurrency:
+  group: telegram-signin
+  cancel-in-progress: false
+
 jobs:
   sign-in:
     runs-on: ubuntu-latest
