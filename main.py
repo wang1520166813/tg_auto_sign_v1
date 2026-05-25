@@ -36,9 +36,10 @@ SIGN_LIST: List[Tuple[str, str]] = [
     ("@XFchart1", "签到"),
     ("@xamowbot", "签到"),
     ("@yuntuvpnbot", "/checkin"),
-    ("@lightningxvpngroup", "抽奖"),  # 新增：lightningxvpngroup 抽奖
-    ("@aisgk1", "/sign"),  # 新增：aisgk1 签到
-    ("@XJSGK_bot", "/sign"),  # 新增：XJSGK_bot 签到
+    ("@lightningxvpngroup", "抽奖"),  # lightningxvpngroup 抽奖
+    ("@lightningxvpn_bot", "领奖"),  # 新增：lightningxvpn_bot 领奖
+    ("@aisgk1", "/sign"),  # aisgk1 签到
+    ("@XJSGK_bot", "/sign"),  # XJSGK_bot 签到
 ]
 
 # 重试与超时配置
@@ -152,7 +153,7 @@ async def connect_with_timeout(client, timeout):
 
 async def main():
     print("=" * 60, flush=True)
-    print(f"🚀 Telegram 自动签到 (完美版 v5 - 新增 XJSGK_bot)", flush=True)
+    print(f"🚀 Telegram 自动签到 (完美版 v6 - 新增 lightningxvpn_bot 领奖)", flush=True)
     start_time = get_beijing_time()
     print(f"📅 启动时间：{start_time}", flush=True)
     print("=" * 60, flush=True)
