@@ -40,6 +40,7 @@ SIGN_LIST: List[Tuple[str, str]] = [
     ("@lightningxvpn_bot", "领奖"),  # 新增：lightningxvpn_bot 领奖
     ("@aisgk1", "/sign"),  # aisgk1 签到
     ("@XJSGK_bot", "/sign"),  # XJSGK_bot 签到
+    ("@ZSNHJLQ", "签到"),  # ZSNHJLQ 签到
 ]
 
 # 重试与超时配置
