@@ -1,7 +1,7 @@
-# Telegram 自动签到脚本 (完美版 v3)
+# Telegram 自动签到脚本 (完美版 v6)
 
 ## 🚀 功能特性
-- ✅ **10 个 Bot/频道自动签到**：内置你的专属签到列表，无需配置
+- ✅ **16 个 Bot/频道自动签到**：内置你的专属签到列表，无需配置
 - ✅ **防卡死设计**：全局超时控制、连接超时、自动断开
 - ✅ **智能重试**：网络波动自动重试 3 次，Flood 限制自动等待
 - ✅ **北京时间日志**：所有日志时间戳自动转换为北京时间 (UTC+8)
@@ -20,8 +20,14 @@
 | @Carll_Bomb_bot | /qd |
 | @jdHappybot | /qd |
 | @nb3344bot | /qd |
-| @SGK76H | 签到 |
-| @XFchart1 | 签到 | **(新增)** |
+| @XFchart1 | /sign_in |
+| @xamowbot | 签到 |
+| @yuntuvpnbot | /checkin |
+| @lightningxvpngroup | 抽奖 |
+| @lightningxvpn_bot | 领奖 |
+| @aisgk1 | /sign |
+| @XJSGK_bot | /sign |
+| @ZSNHJLQ | 签到 |
 
 ## ⚙️ 配置要求
 在 GitHub Secrets (Settings → Secrets and variables → Actions) 中设置以下三个变量：
@@ -104,6 +110,6 @@ python get_session.py
 - 建议定期更新 Session 字符串（每 3-6 个月）
 
 ---
-**最后更新**：2026-04-24 
-**版本**：v3.0 (完美版 - 新增 @XFchart1) 
+**最后更新**：2026-06-20  
+**版本**：v6.0 (完美版 - 新增 @ZSNHJLQ 等频道)  
 **维护者**：wang1520166813
