@@ -69,8 +69,8 @@ def sanitize_error(error_msg):
     """脱敏错误信息，防止泄露敏感数据"""
     if not error_msg:
         return "Unknown error"
-    # 移除长字符串 (可能是 Session/Token)
-    sanitized = re.sub(r'[a-zA-Z0-9_-]{20,}', '[REDACTED]', str(error_msg))
+    # 移除长字符串 (可能是 Session/Token)，阈值 40+ 避免误伤正常用户名
+    sanitized = re.sub(r'[a-zA-Z0-9_-]{40,}', '[REDACTED]', str(error_msg))
     # 移除 IP 地址
     sanitized = re.sub(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', '[IP]', sanitized)
     return sanitized[:150]
@@ -136,7 +136,7 @@ async def sign_bot(client, bot_username, command, retry_count=0):
                 wait_time = 5 * (retry_count + 1)
                 print(f"[{get_beijing_time()}] ↪ 检测到网络波动，{wait_time} 秒后重试...", flush=True)
                 await asyncio.sleep(wait_time)
-                return await sign_bot(client, clean_user, clean_cmd, retry_count + 1)
+                return await sign_bot(client一车, clean_user, clean_cmd, retry_count + 1)
         return False
 
 async def connect_with_timeout(client, timeout):
