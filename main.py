@@ -42,6 +42,10 @@ SIGN_LIST: List[Tuple[str, str]] = [
     ("@XJSGK_bot", "/sign"),  # XJSGK_bot 签到
     ("@ZSNHJLQ", "签到"),  # ZSNHJLQ 签到
     ("@yang_SGKbot", "/sign"),  # yang_SGKbot 签到
+    # 新增签到项目
+    ("@xhssgkBOT", "/ck"),
+    ("@xhgsgk_treebot", "/qd"),
+    ("@haowangshegongkubot", "/sign"),
 ]
 
 # 重试与超时配置
@@ -136,7 +140,7 @@ async def sign_bot(client, bot_username, command, retry_count=0):
                 wait_time = 5 * (retry_count + 1)
                 print(f"[{get_beijing_time()}] ↪ 检测到网络波动，{wait_time} 秒后重试...", flush=True)
                 await asyncio.sleep(wait_time)
-                return await sign_bot(client一车, clean_user, clean_cmd, retry_count + 1)
+                return await sign_bot(client, clean_user, clean_cmd, retry_count + 1)
         return False
 
 async def connect_with_timeout(client, timeout):
@@ -155,7 +159,7 @@ async def connect_with_timeout(client, timeout):
 
 async def main():
     print("=" * 60, flush=True)
-    print(f"🚀 Telegram 自动签到 (完美版 v6 - 新增 lightningxvpn_bot 领奖)", flush=True)
+    print(f"🚀 Telegram 自动签到 (完美版 v6 - 新增 3 个签到项目)", flush=True)
     start_time = get_beijing_time()
     print(f"📅 启动时间：{start_time}", flush=True)
     print("=" * 60, flush=True)
